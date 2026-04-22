@@ -1,0 +1,10 @@
+site_name: fondocs
+theme:
+  name: material
+  palette:
+    primary: indigo # Puedes cambiar el color aquí
+    accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - search.suggest
