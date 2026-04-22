@@ -2,16 +2,25 @@ name: publish-docs
 on:
   push:
     branches:
-      - main  # Se activa cada vez que subes algo a la rama principal
+      - main
 
+# Permisos necesarios para el despliegue directo
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+# Evita que múltiples despliegues choquen entre sí
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Configure Python
         uses: actions/setup-python@v5
@@ -21,5 +30,14 @@ jobs:
       - name: Install dependencies
         run: pip install mkdocs-material
 
+      - name: Build documentation
+        run: mkdocs build  # Solo compila, no empuja a ninguna rama
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/  # MkDocs genera el sitio en esta carpeta por defecto
+
       - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --force
+        id: deployment
+        uses: actions/deploy-pages@v4
