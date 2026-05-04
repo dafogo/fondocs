@@ -1,18 +1,18 @@
-# Welcome to MkDocs
+# fondocs
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Welcome to my personal documentation site. Here I collect guides, notes, and references I use regularly — organized so I (and you) can find them quickly.
 
-## Commands
+## What's here
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+| Section | Description |
+|---|---|
+| **Hardware** | Setup guides and configs for hardware I work with |
 
-## Project layout
+## How to use this site
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-	inicio.md
-...       # Other markdown pages, images and other files.
+- Use the **search bar** (top right) to find anything by keyword
+- Browse **tabs** at the top to navigate sections
+- Toggle **light / dark mode** with the icon in the header
+
+!!! tip "Work in progress"
+    This site grows as I document things. If something is missing or outdated, it's probably next on the list.

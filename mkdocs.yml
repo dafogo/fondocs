@@ -1,10 +1,60 @@
 site_name: fondocs
+site_description: Personal documentation, notes, and guides
+site_author: dafondron
+
 theme:
   name: material
   palette:
-    primary: indigo # Puedes cambiar el color aquí
-    accent: indigo
+    - scheme: slate
+      primary: lime
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+    - scheme: default
+      primary: lime
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
   features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
     - navigation.tabs
     - navigation.sections
+    - navigation.top
+    - toc.follow
+    - toc.integrate
     - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - navigation.path
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+
+nav:
+  - Home: index.md
+  - About: inicio.md
+  - Hardware:
+    - Holybro SiK Telemetry Radio V3: "Holybro SiK Telemetry Radio V3.md"
