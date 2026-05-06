@@ -48,13 +48,29 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
   - attr_list
   - md_in_html
   - tables
   - footnotes
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
   - Home: index.md
   - About: inicio.md
   - Hardware:
     - Holybro SiK Telemetry Radio V3: "Holybro SiK Telemetry Radio V3.md"
+  - Sistemas:
+    - Modelación: sistemas/index.md
+  - Cheat Sheets:
+    - Cargo Nightly: cheatSheets/cargoNightly.md
+    - Docker: cheatSheets/docker.md
+    - Drone Flashing: cheatSheets/droneFlashing.md
+    - Obsidian Update: cheatSheets/obsidianUpdate.md
+    - Quartus Lite: cheatSheets/quartusLite.md
+    - Server Utils: cheatSheets/serverUtils.md
+    - Xampp y SQL: cheatSheets/sql.md

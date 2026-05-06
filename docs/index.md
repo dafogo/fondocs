@@ -1,5 +1,7 @@
 # fondocs
 
+Hoola, este es nuestro sitio de documentación. El plan es mantenerlo actualizado con información útil para consultarla desde cualquier lugar :D
+
 Welcome to my personal documentation site. Here I collect guides, notes, and references I use regularly — organized so I (and you) can find them quickly.
 
 ## What's here
