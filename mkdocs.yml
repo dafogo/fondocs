@@ -60,10 +60,12 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - Home: index.md
+  - Welcome: index.md
   - About: inicio.md
   - Hardware:
     - Holybro SiK Telemetry Radio V3: "Holybro SiK Telemetry Radio V3.md"
+  - PCBs:
+    - Swarm Led Regulator: pecebes/swarmLedRegulator.md
   - Sistemas:
     - Modelación: sistemas/index.md
   - Cheat Sheets:
